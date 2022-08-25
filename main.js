@@ -659,6 +659,6 @@ function sendOrderOnWhatsapp(e){
                 window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank');
             }else{
                 e.preventDefault()
-                document.getelementById('input-error').innerHTML = "Name or Address is blank!"
+                document.getElementById('input-error').innerHTML = "Name or Address is blank!"
             }
 }
