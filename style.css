@@ -47,7 +47,7 @@ header{
 }
 .logo{
     color: yellow;
-    font-size: 4vw;
+    font-size: 4vw !important;
     padding: 1vw;
 }
 .menu-type{
@@ -310,7 +310,7 @@ header{
     }
     .logo{
         color: yellow;
-        font-size: 25px;
+        font-size: 20px !important;
         text-align: center;
     }
     .item-container{
