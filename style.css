@@ -150,7 +150,7 @@ header{
     background-color: red;
     width: fit-content;
     padding: 5px;
-    font-size: 10px;
+    font-size: 10px !important;
 }
 
 .ingredient-img{
@@ -269,6 +269,8 @@ header{
     margin-left: 5px;
 }
 
+
+
 .cart-form button{
     display: flex;
     align-items: center;
@@ -279,6 +281,19 @@ header{
     border: 1px solid rgba(255, 255, 0, 0.3);
     padding: 5px;
     border-radius: 5px;
+}
+
+.blink_me {
+    animation: blinker 0.5s linear infinite;
+    animation-iteration-count: 2;
+  }
+  
+  @keyframes blinker {
+  
+    50% {
+      opacity: 0
+    }
+
 }
 
 @media screen and (max-width: 500px) {
