@@ -201,6 +201,7 @@ header{
 #input-error{
     font-size: 10px,
     color: red;
+    padding: 10px;
 }
 
 #cart-list li{
@@ -347,7 +348,7 @@ header{
         grid-column-start: 3;
         grid-row-end: 3;
         grid-column-end: 4;
-        text-align: end;
+        text-align: start;
      }
     .item-name{
         font-size: 25px;
