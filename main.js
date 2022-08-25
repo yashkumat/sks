@@ -563,22 +563,36 @@ function cartTotal(){
     message += "Total: Rs." + total_amount
 
     document.getElementById('cart_total_item').innerHTML = total_items
+
+    setTimeout(()=>{
+        if(document.getElementById('cart-button').classList.contains('blink_me')){
+            document.getElementById('cart-button').classList.remove('blink_me')
+        }
+    }, 1000)
+
 }
 
 
 function addToCart(a,b){
+    
+    
+
+    document.getElementById('cart-button').classList.add('blink_me')
 
     if(cart[a][b].quantity){
         cart[a][b].quantity++
     }else{
         cart[a][b].quantity = 1
     }
+
     document.getElementById(a+b).innerHTML = cart[a][b].quantity
     cartTotal()
 }
 
 function removeFromCart(a,b){
 
+    document.getElementById('cart-button').classList.add('blink_me')
+    
     if(cart[a][b].quantity > 0){
         cart[a][b].quantity--
     }else{
@@ -624,8 +638,6 @@ function hideCart(){
 }
 
 function sendOrderOnWhatsapp(){
-
-          
             let order = ''
     
             let name = document.getElementById('name').value
@@ -642,6 +654,5 @@ function sendOrderOnWhatsapp(){
     
             let msg = encodeURI(order);
     
-            // console.log(msg)
             window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank');
 }
