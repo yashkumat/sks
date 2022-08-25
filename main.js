@@ -635,24 +635,30 @@ function hideCart(){
     document.getElementById('openCart').style.display = 'none'
 }
 
-function sendOrderOnWhatsapp(){
+function sendOrderOnWhatsapp(e){
             let order = ''
     
             let name = document.getElementById('name').value
             let address = document.getElementById('address').value
+            
+            if(name != "" && address != "") {
     
-            order += 'Thanking for ordering from SK Sandwich Hub.\n\n'
+                order += 'Thanking for ordering from SK Sandwich Hub.\n\n'
     
-            order += 'Your Name: ' +name + '\n'
-            order += 'Your Address: ' +address + '\n'
+                order += 'Your Name: ' +name + '\n'
+                order += 'Your Address: ' +address + '\n'
     
-            order += '\nYour Order:'
+                order += '\nYour Order:'
     
-            order += message
+                order += message
 
-            order += '\n'
+                order += '\n'
     
-            let msg = encodeURI(order);
+                let msg = encodeURI(order);
     
-            window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank');
+                window.open(`https://wa.me/${whatsappNumber}/?text=${msg}`, '_blank');
+            }else{
+                e.preventDefault()
+                document.getelementById('input-error').innerHTML = "Name or Address is blank!"
+            }
 }
