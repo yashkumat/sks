@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Sandwich Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="nav-link contact-link" id="item-0">
+                <a href="#sandwich-section"><img src="sandwich.png" class="nav-img" alt=""></a>
+                <a href="#burger-section"><img src="burger.png" class="nav-img" alt=""></a>
+                <a href="#pizza-section"><img src="pizza.png" class="nav-img" alt=""></a>
+                <a href="#maggi-section"><img src="maggi.png" class="nav-img" alt=""></a>
+                <a href="#toast-section"><img src="toast.png" class="nav-img" alt=""></a>
+                <a href="#beverages-section"><img src="coffee.png" class="nav-img" alt=""></a>
+            </div>
+            <div class="nav-link home-link" id="item-1">
+                <span class="logo">SK SANDWICH HUB</span>
+            </div>
+            <div class="nav-link cart-link" id="item-2">
+                <span id="cart_total_item" class="cart-item-count"></span>
+                <button class="cart-button" onclick="openCart()"><img class="nav-img" src="cart.png" alt=""></button>
+                <a class="cart-button" href="tel:+919527526222"><img class="nav-img ml-2" src="phone.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <section class="sandwich-menu menu-type" id="sandwich-section">
+            <div class="menu-title"><img class="menu-icon" src="sandwich.png" alt=""><span class="menu-name">Sandwich</span></div></span>
+            <div class="item-container" id="sandwich-menu">
+            </div>
+        </section>
+        <section class="burger-menu menu-type" id="burger-section">
+            <div class="menu-title"> <img class="menu-icon" src="burger.png" alt=""><span class="menu-name">Burger</span></div>
+            <div class="item-container" id="burger-menu">
+            </div>
+        </section>
+        <section class="pizza-menu menu-type" id="pizza-section">
+            <div class="menu-title"><img class="menu-icon" src="pizza.png" alt=""><span class="menu-name">Pizza</span></div>
+            <div class="item-container" id="pizza-menu">
+            </div>
+        </section>
+        <section class="maggi-menu menu-type" id="maggi-section">
+            <div class="menu-title"> <img class="menu-icon" src="maggi.png" alt=""><span class="menu-name">Maggi</span></div>
+            <div class="item-container" id="maggi-menu">
+            </div>
+        </section>
+        <section class="toast-menu menu-type " id="toast-section">
+            <div class="menu-title"> <img class="menu-icon" src="toast.png" alt=""><span class="menu-name">toast</span></div>
+            <div class="item-container" id="toast-menu">
+            </div>
+        </section>
+        <section class="beverages-menu menu-type" id="beverages-section">
+            <div class="menu-title"> <img class="menu-icon" src="coffee.png" alt=""><span class="menu-name">Beverages</span></div>
+            <div class="item-container" id="beverages-menu">
+            </div>
+        </section>
+    </div>
+    <div class="footer"></div>
+
+    <div class="openCart" id="openCart">
+        <div class="cart-header" id="cart-header">
+            <a href="#" onclick="hideCart()" class="cart-close-button" >x</a>
+            <div class="cart-title">Cart</div>
+        </div>
+        <div class="cart-body" id="cart-body">
+            <ol id="cart-list"></ol>
+            <div class="total-line"></div>
+            <span class="cart-total" id="cart-total"></span>
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <form class="cart-form" id="cart-form">
+                <h2>Whastapp Order</h2>
+                <div class="form-input">
+                    <input type="text" placeholder="name here" name="name" id="name">
+                </div>
+                <button type="button" onclick="sendOrderOnWhatsapp()">Send <img src="whatsapp.png" class="cart-whatsapp-icon" alt=""></button>                
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
