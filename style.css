@@ -4,10 +4,14 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: 100% !important;
+
+    /* font-size: 16px !important; */
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 body{
     background-color: black;
     width: 100vw;
@@ -189,7 +193,7 @@ header{
     text-decoration: none;
 }
 .cart-title{
-    font-size: 64px;
+    font-size: 64px !important;
 }
 
 .cart-body{
@@ -197,11 +201,6 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-#input-error{
-    font-size: 10px,
-    color: red;
-    padding: 10px;
 }
 
 #cart-list li{
@@ -409,7 +408,7 @@ header{
         font-size: 24px;
     }
     .cart-title{
-        font-size: 48px;
+        font-size: 32px !important;
     }
     #cart-list{
         width: 75%;
@@ -425,17 +424,24 @@ header{
         padding: 5px;
         font-size: 20px;
     }
+    .form-input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
     .form-input input{
         width: 200px;
         height: 25px;
-        margin: 5px 0px 5px 25px;
+        margin-top: 0;
     }
     .total-line{
         margin: 10px 0px 10px 0px;
     }
     .cart-whatsapp-icon{
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
     }
 }
 
