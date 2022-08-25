@@ -574,8 +574,6 @@ function cartTotal(){
 
 
 function addToCart(a,b){
-    
-    
 
     document.getElementById('cart-button').classList.add('blink_me')
 
@@ -641,10 +639,12 @@ function sendOrderOnWhatsapp(){
             let order = ''
     
             let name = document.getElementById('name').value
+            let address = document.getElementById('address').value
     
             order += 'Thanking for ordering from SK Sandwich Hub.\n\n'
     
             order += 'Your Name: ' +name + '\n'
+            order += 'Your Address: ' +address + '\n'
     
             order += '\nYour Order:'
     
