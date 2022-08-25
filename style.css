@@ -277,7 +277,9 @@ header{
     margin-left: 5px;
 }
 
-
+     #item-2 {
+        text-align: end;
+     }
 
 .cart-form button{
     display: flex;
@@ -306,7 +308,7 @@ header{
 
 @media screen and (max-width: 500px) {
     .main{
-        padding-top: 50px;
+        padding-top: 75px;
     }
     .nav-img{
         width: 40px;
